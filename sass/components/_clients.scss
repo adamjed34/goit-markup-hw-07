@@ -1,0 +1,17 @@
+.clients {
+  &__title {
+    @include title-section;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &__items {
+    @include grid;
+  }
+  &__item {
+    @include logo-border;
+  }
+  &__link {
+    @include logo-client;
+  }
+}

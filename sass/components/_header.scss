@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  &__logo {
+    margin-right: 93px;
+    text-decoration: none;
+    @include logo;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    display: flex;
+  }
+  &__menu-item:not(:last-child) {
+    margin-right: 46px;
+  }
+  &__menu-link {
+    @include menu-link;
+  }
+  &__contact {
+    display: flex;
+    align-items: center;
+  }
+  &__contact-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__contact-link {
+    @include contact-link;
+  }
+  &__icon {
+    --color2: currentColor;
+    fill: var(--color2);
+    margin-right: 10px;
+  }
+  &__icon--phone {
+    --color6: currentColor;
+    fill: var(--color6);
+    margin-right: 10px;
+  }
+}
+//accent first part for logo
+.logo__primary-part {
+  color: $accentColor;
+  text-transform: capitalize;
+}
+//bottom border for header
+.header-border {
+  border-bottom: 1px solid $borderNavColor;
+}
+//nav element active
+.is-active::after {
+  @include active;
+}
